@@ -12,7 +12,7 @@ export class UrlScreenshotService {
 
   async create(screenshotCreate: ScreenshotCreateRequestDto): Promise<ScreenshotCreateResponseDto> {
     try {
-      const imageName = Date.now().toString();
+      const imageName = Date.now().toString() + '.png';
       const screenshotMessage: CreateScreenshotMessage = {
         ...screenshotCreate,
         imageName
